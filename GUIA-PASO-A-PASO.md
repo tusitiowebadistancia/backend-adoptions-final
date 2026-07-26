@@ -110,7 +110,7 @@ En GitHub crear un repositorio público llamado `backend-adoptions-final` sin RE
 Conectar y publicar:
 
 ```powershell
-git remote add origin https://github.com/<USUARIO_GITHUB>/backend-adoptions-final.git
+git remote add origin https://github.com/tusitiowebadistancia/backend-adoptions-final.git
 git push -u origin main
 ```
 
@@ -208,14 +208,14 @@ docker run --rm -p <PUERTO_HOST_LIBRE>:8080 <USUARIO_DOCKERHUB>/backend-adoption
 
 ## Etapa 12 — Completar el README
 
-Reemplazar las apariciones de placeholders pendientes:
+Reemplazar los metadatos pendientes con los valores finales:
 
 ```text
-<USUARIO_GITHUB>
+https://github.com/tusitiowebadistancia/backend-adoptions-final
 <USUARIO_DOCKERHUB>
 ```
 
-por el usuario real de GitHub y DockerHub.
+GitHub ya puede quedar con el usuario real `tusitiowebadistancia`. DockerHub puede seguir pendiente con `<USUARIO_DOCKERHUB>` hasta su publicación.
 
 Comprobar que el README incluya:
 
@@ -298,7 +298,7 @@ git push
 [ ] la imagen 1.0.0 está en DockerHub
 [ ] la imagen latest está en DockerHub
 [ ] GitHub es público
-[ ] README no contiene placeholders viejos como `TU_USUARIO`
+[ ] README no contiene placeholders viejos del examen
 [ ] Google Docs contiene códigos, logs y evidencias
 [ ] no hay contraseñas ni archivos .env en GitHub
 ```

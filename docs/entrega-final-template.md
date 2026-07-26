@@ -2,8 +2,8 @@
 
 **Alumno:** Federico  
 **Fecha:** [COMPLETAR]  
-**Repositorio GitHub:** [COMPLETAR URL PÚBLICA]  
-**Imagen DockerHub:** [COMPLETAR URL PÚBLICA]
+**Repositorio GitHub:** `https://github.com/tusitiowebadistancia/backend-adoptions-final`  
+**Imagen DockerHub:** `https://hub.docker.com/r/<USUARIO_DOCKERHUB>/backend-adoptions-final`
 
 ---
 
@@ -161,7 +161,7 @@ docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
 
 ## 7. README completo
 
-[Pegar aquí el contenido completo de README.md después de reemplazar las URLs.]
+[Pegar aquí el contenido completo de README.md con la URL real de GitHub y DockerHub todavía pendiente.]
 
 ## 8. Conclusión
 

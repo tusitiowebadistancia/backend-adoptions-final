@@ -214,14 +214,12 @@ docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
 docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:latest
 ```
 
-## GitHub Pendiente
+## GitHub
 
-Publicación todavía no ejecutada.
-
-Referencia futura:
+Repositorio publicado esperado para esta entrega:
 
 ```text
-https://github.com/<USUARIO_GITHUB>/backend-adoptions-final
+https://github.com/tusitiowebadistancia/backend-adoptions-final
 ```
 
 ## Evidencias

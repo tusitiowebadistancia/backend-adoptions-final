@@ -312,7 +312,7 @@ Cambios realizados:
 
 - se eliminaron referencias obsoletas al primer escaneo como estado vigente
 - se actualizo la seccion de seguridad con comparacion antes/despues
-- se reemplazo `TU_USUARIO` por `<USUARIO_DOCKERHUB>` en la seccion pendiente de DockerHub
+- se reemplazo el placeholder viejo de usuario por `<USUARIO_DOCKERHUB>` en la seccion pendiente de DockerHub
 - se mantuvo GitHub y DockerHub como pendientes
 - se uso `<PUERTO_HOST_LIBRE>` en los ejemplos Docker donde el puerto del host puede variar
 - se conservaron `42` tests y `100%` de cobertura como resultados actuales

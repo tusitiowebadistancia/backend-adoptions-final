@@ -52,7 +52,7 @@ Validaciones reales:
 
 - reescritura completa de `README.md` para dejar una sola versión coherente de cada sección principal
 - eliminación de estados pendientes ya resueltos
-- eliminación de referencias a `TU_USUARIO`
+- eliminación de referencias al placeholder viejo de usuario
 - normalización de placeholders a `<USUARIO_GITHUB>`, `<USUARIO_DOCKERHUB>` y `<PUERTO_HOST_LIBRE>`
 - actualización del estado Docker y seguridad al resultado final remediado
 - actualización de `GUIA-PASO-A-PASO.md`
@@ -179,14 +179,14 @@ Incluidos en el staging:
 
 ## 17. Commit local
 
-Commit planificado:
+Commit creado en Fase 4A:
 
 - `feat: complete adoption API with tests Docker and security documentation`
 
 ## 18. Hash del commit
 
-- El hash exacto del commit local inicial se registra después de crearlo con `git log --oneline --decorate -5`.
-- Ese dato también se reporta al cierre de esta fase.
+- Hash corto: `b8af038`
+- Hash completo: `b8af0383cd904e1ce506752d7fad2905096fb5d8`
 
 ## 19. Branch
 
@@ -194,12 +194,11 @@ Commit planificado:
 
 ## 20. Estado final
 
-Objetivo de cierre de esta fase:
+Estado real al cierre de Fase 4A:
 
-- un único commit local
 - working tree clean
-- sin remote
-- sin push
+- remote: ninguno
+- push: no ejecutado
 
 ## 21. Datos necesarios para GitHub
 
@@ -214,11 +213,11 @@ Objetivo de cierre de esta fase:
 
 ## 23. Pendientes
 
-- crear o vincular repositorio GitHub
-- publicar branch `main`
+- Fase 4B: vincular `origin` al repositorio GitHub real
+- Fase 4B: publicar `main` en GitHub
 - etiquetar y publicar imagen en DockerHub
 - reemplazar placeholders públicos cuando existan las URLs finales
 
 ## 24. Conclusión
 
-El repositorio quedó auditado, sin secretos detectados, con documentación principal coherente, con evidencia técnica organizada y con staging preparado para crear un único commit local sin publicar todavía en GitHub ni DockerHub.
+La Fase 4A cerró con auditoría del repositorio, limpieza documental, comprobación técnica final, repositorio Git local en `main`, commit inicial creado y working tree limpio, todavía sin remote ni publicación. La Fase 4B queda reservada para vincular GitHub y publicar `main`.

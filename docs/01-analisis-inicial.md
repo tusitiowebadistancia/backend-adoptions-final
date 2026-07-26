@@ -477,7 +477,7 @@ No se ejecutaron `npm audit --omit=dev`, `npm audit` ni `npm ls glob` porque no 
 | Construccion Docker | Presente | No verificada todavia. |
 | Ejecucion Docker | Presente | No verificada todavia. |
 | Tests dentro de Docker | Presente | No verificados todavia. |
-| DockerHub | Presente | Tiene placeholders `TU_USUARIO`. |
+| DockerHub | Presente | Tiene placeholders de usuario pendientes. |
 | Seguridad | Presente | No tiene resultados reales aun. |
 | Evidencias | Presente | La carpeta esta vacia salvo `.gitkeep`. |
 | URL de GitHub | Placeholder | No existe URL real consignada. |
@@ -488,8 +488,8 @@ No se ejecutaron `npm audit --omit=dev`, `npm audit` ni `npm ls glob` porque no 
 
 | Archivo | Hallazgo |
 | --- | --- |
-| `README.md` | Contiene `TU_USUARIO` en URLs y comandos de DockerHub. |
-| `GUIA-PASO-A-PASO.md` | Contiene `TU_USUARIO` y asume etapas todavia no realizadas. |
+| `README.md` | Contenia placeholders de usuario en URLs y comandos de DockerHub. |
+| `GUIA-PASO-A-PASO.md` | Contenia placeholders de usuario y asumia etapas todavia no realizadas. |
 | `docs/entrega-final-template.md` | Contiene `[COMPLETAR]`, URLs pendientes y texto declarativo que aun no puede sostenerse con evidencia real. |
 
 ### 12.3 Revision de `GUIA-PASO-A-PASO.md`
@@ -768,10 +768,10 @@ Archivos que probablemente se modificaran:
 Comandos previstos:
 
 - `docker login`
-- `docker tag backend-adoptions-final:1.0.0 TU_USUARIO/backend-adoptions-final:1.0.0`
-- `docker tag backend-adoptions-final:1.0.0 TU_USUARIO/backend-adoptions-final:latest`
-- `docker push TU_USUARIO/backend-adoptions-final:1.0.0`
-- `docker push TU_USUARIO/backend-adoptions-final:latest`
+- `docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0`
+- `docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:latest`
+- `docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0`
+- `docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:latest`
 
 Evidencias que deben guardarse:
 
