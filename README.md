@@ -195,28 +195,28 @@ Documentación relacionada:
 - `docs/04-dockerizacion-seguridad.md`
 - `docs/05-remediacion-seguridad.md`
 
-## DockerHub Pendiente
+## DockerHub
 
-Publicación todavía no ejecutada.
-
-Referencia futura:
+Repositorio público publicado:
 
 ```text
-https://hub.docker.com/r/<USUARIO_DOCKERHUB>/backend-adoptions-final
+https://hub.docker.com/r/figi1998/backend-adoptions-final
 ```
 
-Comandos de referencia cuando corresponda:
+Usuario Docker Hub publicado:
+
+- `figi1998`
+
+Comandos públicos verificados:
 
 ```bash
-docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
-docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:latest
-docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
-docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:latest
+docker pull figi1998/backend-adoptions-final:1.0.0
+docker run --rm -p <PUERTO_HOST_LIBRE>:8080 figi1998/backend-adoptions-final:1.0.0
 ```
 
 ## GitHub
 
-Repositorio publicado esperado para esta entrega:
+Repositorio público publicado:
 
 ```text
 https://github.com/tusitiowebadistancia/backend-adoptions-final
@@ -239,6 +239,9 @@ Evidencias técnicas:
 - `docs/evidence/npm-audit-production.log`
 - `docs/evidence/docker-images-remediation.txt`
 - `docs/evidence/docker-scout-remediated-summary.txt`
+- `docs/evidence/dockerhub-manifest-1.0.0.json`
+- `docs/evidence/dockerhub-manifest-latest.json`
+- `docs/evidence/dockerhub-scout-summary.txt`
 - `docs/evidence/security-package-origin.log`
 - `docs/evidence/remediation-final-checks-summary.txt`
 

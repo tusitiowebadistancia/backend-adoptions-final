@@ -1,0 +1,29 @@
+Docker Hub Scout summary generated from real execution
+
+Date:
+- 2026-07-26 17:27:37 -03:00
+
+Image:
+- registry://figi1998/backend-adoptions-final:1.0.0
+
+Remote tag digest:
+- sha256:774feb300e9562eca3a44c0c1e972238339f5af22acbd2e466f0744ad845ffe1
+
+Remote linux/amd64 manifest digest:
+- sha256:0968a924fc93a6e6bfeb1aba69f38a897131cfcc1032e2c497838fc7c53bd227
+
+Results:
+- Quickview: 0C 0H 0M 0L
+- CVEs: no vulnerable packages detected
+- Packages indexed: 93
+- Platform scanned: linux/amd64
+
+Notes:
+- The first remote Scout attempt without platform failed because the current host defaulted to windows/amd64.
+- The final evidence was generated using --platform linux/amd64, which matches the published image.
+
+Evidence files:
+- docs/evidence/dockerhub-scout-quickview.log
+- docs/evidence/dockerhub-scout-cves.log
+- docs/evidence/dockerhub-manifest-1.0.0.json
+- docs/evidence/dockerhub-manifest-latest.json

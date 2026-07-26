@@ -32,6 +32,12 @@
 
 - `04f3d4b` - `docs: finalize publication metadata and repository links`
 
+## 8.1 Secuencia real de commits publicada en GitHub durante la Fase 4B
+
+- `b8af038` - commit inicial local
+- `04f3d4b` - corrección documental y primer push
+- `cd49dd8` - evidencia final de publicación GitHub
+
 ## 9. Resultado de git push
 
 Resultado real del primer push:
@@ -44,13 +50,18 @@ Evidencia:
 
 - `docs/evidence/github-push.log`
 
-## 10. Hash local final
+## 10. Hash local final de la Fase 4B
 
-- `04f3d4be087c82adca7363b4580bda564c362d64`
+- `cd49dd899f06f07146cc128d1d85368496a2afa1`
 
-## 11. Hash remoto final
+## 11. Hash remoto final de la Fase 4B
 
-- `04f3d4be087c82adca7363b4580bda564c362d64`
+- `cd49dd899f06f07146cc128d1d85368496a2afa1`
+
+Aclaracion historica:
+
+- `04f3d4be087c82adca7363b4580bda564c362d64` fue el hash remoto final despues del primer push de `main`.
+- `cd49dd899f06f07146cc128d1d85368496a2afa1` fue el hash remoto final al cierre de la Fase 4B, luego del commit de evidencia de publicación.
 
 ## 12. Verificación de origin/main
 
@@ -58,7 +69,7 @@ Resultado real:
 
 - `origin/main` existe
 - `main` rastrea `origin/main`
-- el hash remoto coincide con el último commit local publicado en esta etapa
+- el hash remoto coincide con el último commit local publicado al cierre de la Fase 4B
 
 Evidencia:
 
@@ -67,11 +78,11 @@ Evidencia:
 
 ## 13. Estado del working tree
 
-Estado observado después del primer push:
+Estado observado al cierre de la Fase 4B:
 
 - branch local: `main`
 - upstream: `origin/main`
-- el árbol quedó pendiente solo por la creación local de evidencias y documentación de esta misma fase, que se registran en el commit siguiente
+- working tree limpio despues del commit final de evidencia GitHub
 
 ## 14. Archivos creados
 
@@ -90,12 +101,11 @@ Estado observado después del primer push:
 - `docs/evidence/github-final-status.txt`
 - `docs/evidence/github-log.txt`
 
-## 16. DockerHub pendiente
+## 16. DockerHub pendiente al cierre de la Fase 4B
 
-- DockerHub sigue pendiente
-- no se ejecutó `docker login`
-- no se ejecutó `docker push`
+- DockerHub seguía pendiente en ese momento
+- no se había ejecutado `docker push`
 
 ## 17. Conclusión
 
-La branch `main` quedó publicada correctamente en GitHub bajo la cuenta `tusitiowebadistancia`, con `origin` configurado al repositorio esperado y con coincidencia entre el hash local y remoto del commit documental de publicación previo al registro final de evidencias.
+La branch `main` quedó publicada correctamente en GitHub bajo la cuenta `tusitiowebadistancia`, con `origin` configurado al repositorio esperado y con coincidencia entre los hashes local y remoto al cierre de la Fase 4B. La secuencia publicada fue `b8af038`, luego `04f3d4b` y finalmente `cd49dd8`.

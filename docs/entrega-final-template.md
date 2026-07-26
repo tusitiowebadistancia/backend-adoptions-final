@@ -3,7 +3,7 @@
 **Alumno:** Federico  
 **Fecha:** [COMPLETAR]  
 **Repositorio GitHub:** `https://github.com/tusitiowebadistancia/backend-adoptions-final`  
-**Imagen DockerHub:** `https://hub.docker.com/r/<USUARIO_DOCKERHUB>/backend-adoptions-final`
+**Imagen DockerHub:** `https://hub.docker.com/r/figi1998/backend-adoptions-final`
 
 ---
 
@@ -91,7 +91,7 @@ docker build -t backend-adoptions-final:1.0.0 .
 
 **Nombre local:** `backend-adoptions-final`  
 **Tag:** `1.0.0`  
-**Nombre público:** `<USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0`
+**Nombre público:** `figi1998/backend-adoptions-final:1.0.0`
 
 ### 5.1 Evidencia de construcción
 
@@ -155,13 +155,13 @@ docker run --name backend-adoptions-final-container -p <PUERTO_HOST_LIBRE>:8080 
 
 ```bash
 docker login
-docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
-docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
+docker tag backend-adoptions-final:1.0.0 figi1998/backend-adoptions-final:1.0.0
+docker push figi1998/backend-adoptions-final:1.0.0
 ```
 
 ## 7. README completo
 
-[Pegar aquí el contenido completo de README.md con la URL real de GitHub y DockerHub todavía pendiente.]
+[Pegar aquí el contenido completo de README.md con las URLs públicas reales de GitHub y DockerHub.]
 
 ## 8. Conclusión
 

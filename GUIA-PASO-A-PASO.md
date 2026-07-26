@@ -194,28 +194,28 @@ Crear en DockerHub un repositorio público llamado `backend-adoptions-final`.
 
 ```powershell
 docker login
-docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
-docker tag backend-adoptions-final:1.0.0 <USUARIO_DOCKERHUB>/backend-adoptions-final:latest
-docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
-docker push <USUARIO_DOCKERHUB>/backend-adoptions-final:latest
+docker tag backend-adoptions-final:1.0.0 figi1998/backend-adoptions-final:1.0.0
+docker tag backend-adoptions-final:1.0.0 figi1998/backend-adoptions-final:latest
+docker push figi1998/backend-adoptions-final:1.0.0
+docker push figi1998/backend-adoptions-final:latest
 ```
 
 Probar la imagen publicada:
 
 ```powershell
-docker run --rm -p <PUERTO_HOST_LIBRE>:8080 <USUARIO_DOCKERHUB>/backend-adoptions-final:1.0.0
+docker run --rm -p <PUERTO_HOST_LIBRE>:8080 figi1998/backend-adoptions-final:1.0.0
 ```
 
 ## Etapa 12 — Completar el README
 
-Reemplazar los metadatos pendientes con los valores finales:
+Usar los metadatos públicos reales:
 
 ```text
 https://github.com/tusitiowebadistancia/backend-adoptions-final
-<USUARIO_DOCKERHUB>
+https://hub.docker.com/r/figi1998/backend-adoptions-final
 ```
 
-GitHub ya puede quedar con el usuario real `tusitiowebadistancia`. DockerHub puede seguir pendiente con `<USUARIO_DOCKERHUB>` hasta su publicación.
+GitHub y DockerHub ya pueden quedar con sus URLs públicas reales.
 
 Comprobar que el README incluya:
 

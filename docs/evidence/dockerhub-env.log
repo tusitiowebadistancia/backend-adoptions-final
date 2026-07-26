@@ -1,0 +1,9 @@
+﻿NODE_VERSION=24.18.0
+HOSTNAME=0a81a6f73c1c
+YARN_VERSION=1.22.22
+SHLVL=1
+PORT=8080
+HOME=/home/node
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/app
+NODE_ENV=production

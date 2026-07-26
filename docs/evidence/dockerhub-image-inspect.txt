@@ -1,0 +1,6 @@
+﻿ID=sha256:774feb300e9562eca3a44c0c1e972238339f5af22acbd2e466f0744ad845ffe1
+RepoDigests=figi1998/backend-adoptions-final@sha256:774feb300e9562eca3a44c0c1e972238339f5af22acbd2e466f0744ad845ffe1, backend-adoptions-final@sha256:774feb300e9562eca3a44c0c1e972238339f5af22acbd2e466f0744ad845ffe1
+User=node
+Cmd="node" "src/server.js"
+Env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin; NODE_VERSION=24.18.0; YARN_VERSION=1.22.22; NODE_ENV=production; PORT=8080
+Size=58317422
