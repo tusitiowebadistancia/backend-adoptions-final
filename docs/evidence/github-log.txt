@@ -1,0 +1,2 @@
+﻿04f3d4b (HEAD -> main, origin/main) docs: finalize publication metadata and repository links
+b8af038 feat: complete adoption API with tests Docker and security documentation
