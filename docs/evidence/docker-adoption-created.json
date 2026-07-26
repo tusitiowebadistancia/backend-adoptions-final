@@ -1,0 +1,10 @@
+﻿{
+    "status":  "success",
+    "message":  "Adopción creada correctamente",
+    "payload":  {
+                    "_id":  "1670d9a853127bd76e5b7157",
+                    "owner":  "64b000000000000000000001",
+                    "pet":  "64b000000000000000000002",
+                    "createdAt":  "2026-07-26T18:48:56.762Z"
+                }
+}

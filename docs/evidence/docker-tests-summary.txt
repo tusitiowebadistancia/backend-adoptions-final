@@ -1,0 +1,19 @@
+Docker test target summary generated from real execution
+
+Command:
+docker run --rm backend-adoptions-final:test
+
+Result:
+- Total tests: 42
+- Passing: 42
+- Failing: 0
+- Exit code: 0
+- Duration reported by Mocha: about 1s
+
+Distribution executed inside Docker:
+- Functional tests: 17
+- Unit tests: 24
+- Integration tests: 1
+
+Conclusion:
+- The Docker test image executes the same complete suite as local `npm test`.

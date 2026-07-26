@@ -1,0 +1,38 @@
+{
+  "name": "backend-adoptions-final",
+  "version": "1.0.0",
+  "description": "API REST de adopciones con tests funcionales, cobertura y Docker.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "mocha \"test/**/*.test.js\" --timeout 5000",
+    "test:functional": "mocha \"test/functional/**/*.test.js\" --timeout 5000",
+    "test:unit": "mocha \"test/unit/**/*.test.js\" --timeout 5000",
+    "test:coverage": "c8 --all --include=src/**/*.js --exclude=src/server.js --reporter=text --reporter=html --check-coverage --lines=100 --functions=100 --branches=100 --statements=100 npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mocha",
+    "supertest",
+    "sinon",
+    "docker",
+    "adoptions"
+  ],
+  "author": "Federico",
+  "license": "MIT",
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "c8": "12.0.0",
+    "mocha": "11.7.6",
+    "sinon": "22.1.0",
+    "supertest": "7.2.2"
+  }
+}

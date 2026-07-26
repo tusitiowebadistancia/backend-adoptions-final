@@ -1,0 +1,24 @@
+Remediation final checks summary generated from real execution
+
+Date:
+- 2026-07-26 16:36:54 -03:00
+
+Commands:
+- npm test
+- npm run test:coverage
+- npm audit --omit=dev
+
+Results:
+- npm test: 42 passing
+- npm run test:coverage: 42 passing and 100% statements, branches, functions, and lines
+- npm audit --omit=dev: found 0 vulnerabilities
+
+Runtime validation summary:
+- User: uid=1000(node) gid=1000(node)
+- NODE_ENV=production
+- PORT=8080
+- express present at /app/node_modules/express/package.json
+- mocha, sinon, supertest and c8 absent from runtime
+- npm and npx absent from runtime
+- health check: healthy
+- endpoints verified: 200, 201, 400, 404, 409

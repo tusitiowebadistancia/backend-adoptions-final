@@ -1,0 +1,85 @@
+Security package origin audit generated from real execution
+
+Date:
+- 2026-07-26 16:36:54 -03:00
+
+Image audited:
+- backend-adoptions-final:1.0.0
+- Digest before remediation: sha256:176501c7ab6f074510d85853fa221646101852f3d87ca7fcb8a6397f4c69be06
+
+Command:
+- docker run --rm backend-adoptions-final:1.0.0 sh -lc "npm root -g"
+Output:
+- /usr/local/lib/node_modules
+
+Command:
+- docker run --rm backend-adoptions-final:1.0.0 sh -lc "find /usr/local -type d \( -name tar -o -name brace-expansion -o -name undici \) 2>/dev/null"
+Output:
+- /usr/local/lib/node_modules/npm/node_modules/undici
+- /usr/local/lib/node_modules/npm/node_modules/tar
+- /usr/local/lib/node_modules/npm/node_modules/brace-expansion
+
+Command:
+- docker run --rm backend-adoptions-final:1.0.0 sh -lc "find /app/node_modules -maxdepth 4 -type d \( -name tar -o -name brace-expansion -o -name undici \) 2>/dev/null"
+Output:
+- no matches
+
+Command:
+- docker run --rm backend-adoptions-final:1.0.0 sh -lc "find /usr/local/lib/node_modules/corepack -type d \( -name tar -o -name brace-expansion -o -name undici \) 2>/dev/null"
+Output:
+- no matches
+
+Command:
+- docker run --rm backend-adoptions-final:1.0.0 node -p "require.resolve('express/package.json')"
+Output:
+- /app/node_modules/express/package.json
+
+Command:
+- docker run --rm backend-adoptions-final:1.0.0 sh -lc "ls -l /usr/local/bin/npm /usr/local/bin/npx; ls -ld /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack"
+Output:
+- /usr/local/bin/npm -> ../lib/node_modules/npm/bin/npm-cli.js
+- /usr/local/bin/npx -> ../lib/node_modules/npm/bin/npx-cli.js
+- /usr/local/lib/node_modules/npm exists
+- /usr/local/lib/node_modules/corepack exists
+
+Command:
+- docker scout cves --locations --only-package tar backend-adoptions-final:1.0.0
+Output:
+- package: tar@7.5.15
+- location: /usr/local/lib/node_modules/npm/node_modules/tar/package.json
+- diff_id: sha256:0ba8902ff50f7fee1d64f2ed6d666e61a9fde25a6d288e667ac6690dd864f97b
+
+Command:
+- docker scout cves --locations --only-package brace-expansion backend-adoptions-final:1.0.0
+Output:
+- package: brace-expansion@5.0.6
+- location: /usr/local/lib/node_modules/npm/node_modules/brace-expansion/package.json
+- diff_id: sha256:0ba8902ff50f7fee1d64f2ed6d666e61a9fde25a6d288e667ac6690dd864f97b
+
+Command:
+- docker scout cves --locations --only-package undici backend-adoptions-final:1.0.0
+Output:
+- package: undici@6.26.0
+- location: /usr/local/lib/node_modules/npm/node_modules/undici/package.json
+- diff_id: sha256:0ba8902ff50f7fee1d64f2ed6d666e61a9fde25a6d288e667ac6690dd864f97b
+
+Relevant npm global dependency chains from docker run --rm backend-adoptions-final:1.0.0 sh -lc "npm ls -g --all || true":
+- npm@11.16.0
+- minimatch@10.2.5 -> brace-expansion@5.0.6
+- libnpmdiff@8.1.9 -> tar@7.5.15
+- pacote@21.5.0 -> tar@7.5.15
+- node-gyp@12.3.0 -> tar@7.5.15
+- node-gyp@12.3.0 -> undici@6.26.0
+
+Layer mapping:
+- docker-image-inspect RootFS layer order shows sha256:0ba8902ff50f7fee1d64f2ed6d666e61a9fde25a6d288e667ac6690dd864f97b as the second filesystem layer of the final image.
+- docker-history shows the matching base-image layer command as the Node installation layer:
+  RUN /bin/sh -c addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node && ... && tar -xJf "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" -C /usr/local --strip-components=1 --no-same-owner && ln -s /usr/local/bin/node /usr/local/bin/nodejs
+
+Origin conclusion:
+- tar@7.5.15: bundled inside global npm under /usr/local/lib/node_modules/npm/node_modules/tar
+- brace-expansion@5.0.6: bundled inside global npm under /usr/local/lib/node_modules/npm/node_modules/brace-expansion
+- undici@6.26.0: bundled inside global npm under /usr/local/lib/node_modules/npm/node_modules/undici
+- none of the vulnerable packages were found in /app/node_modules
+- none of the vulnerable packages were found in corepack
+- classification: global npm from the Node 24 Alpine base image, not application dependencies

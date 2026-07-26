@@ -1,0 +1,20 @@
+﻿On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.dockerignore
+	.env.example
+	.gitignore
+	Dockerfile
+	GUIA-PASO-A-PASO.md
+	README.md
+	docs/
+	package-lock.json
+	package.json
+	scripts/
+	src/
+	test/
+
+nothing added to commit but untracked files present (use "git add" to track)

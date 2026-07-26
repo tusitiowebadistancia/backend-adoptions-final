@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+.env
+.env.*
+!.env.example
+npm-debug.log*
+*.log
+.DS_Store
+.vscode/
+.idea/
+!docs/evidence/*.log
+docs/evidence/git-log.txt
+docs/evidence/git-final-status.txt

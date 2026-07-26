@@ -1,0 +1,37 @@
+Docker Scout remediated summary generated from real execution
+
+Date:
+- 2026-07-26 16:36:54 -03:00
+
+Images:
+- Before: backend-adoptions-final:pre-remediation -> 176501c7ab6f
+- Candidate: backend-adoptions-final:security-candidate -> 774feb300e95
+- Promoted tags: backend-adoptions-final:1.0.0 and backend-adoptions-final:latest -> 774feb300e95
+
+Comparison:
+
+| Severity | Before | After |
+| --- | ---: | ---: |
+| Critical | 1 | 0 |
+| High | 4 | 0 |
+| Medium | 5 | 0 |
+| Low | 2 | 0 |
+
+Quickview after remediation:
+- Target: backend-adoptions-final:security-candidate
+- Digest: 774feb300e95
+- Vulnerabilities: 0C 0H 0M 0L
+- Packages indexed: 93
+
+Recommendations after remediation:
+- Base image remains node:24-alpine
+- Docker Scout still reports the base image reference with 1C 4H 5M 2L
+- The remediated final filesystem for the candidate image reports no vulnerable packages
+- Base image refresh recommendation: current tag is up to date
+- Alternative tag recommendation: none
+
+Raw evidence files:
+- docs/evidence/docker-scout-remediated-quickview.log
+- docs/evidence/docker-scout-remediated-cves.log
+- docs/evidence/docker-scout-remediated-recommendations.log
+- docs/evidence/docker-images-remediation.txt

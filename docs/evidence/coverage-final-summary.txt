@@ -1,0 +1,40 @@
+Final coverage run summary generated from real execution
+
+Command:
+npm run test:coverage
+
+Coverage configuration:
+- all source files included with `--all`
+- include pattern: `src/**/*.js`
+- excluded file: `src/server.js`
+- reporters: text, html
+- thresholds: statements 100, branches 100, functions 100, lines 100
+
+Result:
+- Statements: 100%
+- Branches: 100%
+- Functions: 100%
+- Lines: 100%
+- Command status: success
+
+Included files covered at 100%:
+- src/app.js
+- src/composition-root.js
+- src/controllers/adoption.controller.js
+- src/data/seed.js
+- src/errors/app-errors.js
+- src/middlewares/async-handler.js
+- src/middlewares/error-handler.js
+- src/middlewares/not-found.js
+- src/repositories/memory-adoption.repository.js
+- src/repositories/memory-pet.repository.js
+- src/repositories/memory-user.repository.js
+- src/routes/adoption.router.js
+- src/services/adoption.service.js
+- src/utils/is-valid-id.js
+
+Excluded file and justification:
+- src/server.js: excluded because it contains process startup and signal handling. It must be validated through real local execution rather than in-process coverage instrumentation.
+
+Note:
+The original UTF-8 redirected log was preserved as `docs/evidence/coverage-final.log`. This ASCII summary exists because the current PowerShell display path renders some characters incorrectly when reading that file.

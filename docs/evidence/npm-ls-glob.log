@@ -1,0 +1,7 @@
+backend-adoptions-final@1.0.0 C:\Users\fedel\OneDrive\Escritorio\backend-adoptions-final\backend-adoptions-final
+├─┬ c8@12.0.0
+│ └─┬ test-exclude@8.0.0
+│   └── glob@13.0.6
+└─┬ mocha@11.7.6
+  └── glob@10.5.0
+

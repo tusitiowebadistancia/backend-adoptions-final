@@ -1,0 +1,33 @@
+Docker Scout summary generated from real execution
+
+Date:
+- 2026-07-26 16:17:47 -03:00
+
+Commands:
+- docker scout quickview backend-adoptions-final:1.0.0
+- docker scout cves backend-adoptions-final:1.0.0
+- docker scout recommendations backend-adoptions-final:1.0.0
+
+Quickview:
+- Target: backend-adoptions-final:1.0.0
+- Digest: 176501c7ab6f
+- Base image: node:24-alpine
+- Vulnerability summary: 1 critical, 4 high, 5 medium, 2 low
+
+CVEs:
+- Total vulnerabilities: 12
+- Affected packages: 3
+- Package tar@7.5.15: 1 critical, 1 high, 4 medium
+- Package brace-expansion@5.0.6: 2 high
+- Package undici@6.26.0: 1 high, 1 medium, 2 low
+
+Recommendations:
+- Docker Scout recommendations command is available in this environment.
+- Base image analyzed: node:24-alpine
+- Refresh base image: this image version is up to date.
+- Change base image: there are no tag recommendations at this time.
+
+Raw evidence files:
+- docs/evidence/docker-scout-quickview.txt
+- docs/evidence/docker-scout-cves.txt
+- docs/evidence/docker-scout-recommendations.txt

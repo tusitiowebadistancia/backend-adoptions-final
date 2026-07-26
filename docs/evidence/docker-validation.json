@@ -1,0 +1,10 @@
+﻿{
+    "statusCode":  400,
+    "body":  {
+                 "status":  "error",
+                 "error":  {
+                               "code":  "VALIDATION_ERROR",
+                               "message":  "El ID de la adopción no es válido"
+                           }
+             }
+}

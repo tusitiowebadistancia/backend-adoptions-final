@@ -1,0 +1,24 @@
+Test run summary generated after `npm test`
+Timestamp: 2026-07-26 14:49:10 -03:00
+
+Command:
+npm test
+
+Result:
+- Suites observed: 6
+- Tests passing: 26
+- Tests failing: 0
+- Duration: 882ms in console rerun, 931ms in redirected log run
+
+Groups executed:
+- Functional router tests for `adoption.router.js`
+- Functional app tests for Express app setup and generic routes
+- Unit tests for `AdoptionService`
+
+Functional endpoint coverage observed:
+- GET /api/adoptions: success, empty list, internal error
+- GET /api/adoptions/:aid: success, invalid ID, not found, internal error
+- POST /api/adoptions/:uid/:pid: success, invalid user ID, invalid pet ID, user not found, pet not found, conflict, internal error
+
+Note:
+The UTF-8 redirected `tests.log` was generated successfully, but some characters render incorrectly when read through the current PowerShell display path. This ASCII summary is supplemental evidence only.

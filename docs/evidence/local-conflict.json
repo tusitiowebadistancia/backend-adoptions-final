@@ -1,0 +1,10 @@
+﻿{
+    "statusCode":  409,
+    "body":  {
+                 "status":  "error",
+                 "error":  {
+                               "code":  "CONFLICT",
+                               "message":  "La mascota ya fue adoptada"
+                           }
+             }
+}

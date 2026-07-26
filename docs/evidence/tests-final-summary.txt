@@ -1,0 +1,30 @@
+Final test run summary generated from real execution
+
+Command:
+npm test
+
+Result:
+- Total tests: 42
+- Passing: 42
+- Failing: 0
+- Duration observed: 913ms in console run, 844ms in redirected log run
+
+Distribution:
+- Functional tests: 17
+- Unit tests: 24
+- Integration tests: 1
+
+Functional endpoint cases covered:
+- GET /api/adoptions: success with data, success with empty list, 500
+- GET /api/adoptions/:aid: success, 400 validation, 404 not found, 500
+- POST /api/adoptions/:uid/:pid: 201 success, 400 invalid user ID, 400 invalid pet ID, 404 user, 404 pet, 409 conflict, 500
+
+Additional coverage from this phase:
+- App health and unknown route handling
+- Guard clauses for router and controller factories
+- Error middleware behavior when headers were already sent
+- Real memory repositories
+- Real composition root assembly
+
+Note:
+The original UTF-8 redirected log was preserved as `docs/evidence/tests-final.log`. This ASCII summary exists because the current PowerShell display path renders some characters incorrectly when reading that file.

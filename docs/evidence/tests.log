@@ -1,0 +1,44 @@
+
+> backend-adoptions-final@1.0.0 test
+> mocha "test/**/*.test.js" --timeout 5000
+
+
+
+  Tests funcionales de adoption.router.js
+    GET /api/adoptions
+      ✔ devuelve todas las adopciones (115ms)
+      ✔ devuelve una lista vacía cuando no existen adopciones
+      ✔ devuelve 500 cuando el servicio falla
+    GET /api/adoptions/:aid
+      ✔ devuelve una adopción existente
+      ✔ devuelve 400 cuando el ID tiene un formato inválido
+      ✔ devuelve 404 cuando la adopción no existe (48ms)
+      ✔ devuelve 500 ante un error inesperado (51ms)
+    POST /api/adoptions/:uid/:pid
+      ✔ crea una adopción correctamente (59ms)
+      ✔ devuelve 400 cuando el ID del usuario es inválido (74ms)
+      ✔ devuelve 400 cuando el ID de la mascota es inválido
+      ✔ devuelve 404 cuando el usuario no existe
+      ✔ devuelve 404 cuando la mascota no existe
+      ✔ devuelve 409 cuando la mascota ya fue adoptada
+      ✔ devuelve 500 ante un error inesperado
+
+  Aplicación Express
+    ✔ responde correctamente al health check
+    ✔ devuelve 404 para una ruta inexistente
+    ✔ exige un servicio de adopciones para iniciar
+
+  AdoptionService
+    ✔ exige todos los repositorios
+    ✔ obtiene todas las adopciones
+    ✔ obtiene una adopción por ID
+    ✔ lanza NotFoundError si la adopción no existe
+    ✔ lanza NotFoundError si el usuario no existe
+    ✔ lanza NotFoundError si la mascota no existe
+    ✔ lanza ConflictError si la mascota ya fue adoptada
+    ✔ crea la adopción y actualiza usuario y mascota
+    ✔ no duplica una mascota que ya figura en el usuario
+
+
+  26 passing (931ms)
+

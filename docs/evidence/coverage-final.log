@@ -1,0 +1,101 @@
+
+> backend-adoptions-final@1.0.0 test:coverage
+> c8 --all --include=src/**/*.js --exclude=src/server.js --reporter=text --reporter=html --check-coverage --lines=100 --functions=100 --branches=100 --statements=100 npm test
+
+
+> backend-adoptions-final@1.0.0 test
+> mocha "test/**/*.test.js" --timeout 5000
+
+
+
+  Tests funcionales de adoption.router.js
+    GET /api/adoptions
+      ✔ devuelve todas las adopciones (196ms)
+      ✔ devuelve una lista vacía cuando no existen adopciones
+      ✔ devuelve 500 cuando el servicio falla
+    GET /api/adoptions/:aid
+      ✔ devuelve una adopción existente
+      ✔ devuelve 400 cuando el ID tiene un formato inválido
+      ✔ devuelve 404 cuando la adopción no existe
+      ✔ devuelve 500 ante un error inesperado
+    POST /api/adoptions/:uid/:pid
+      ✔ crea una adopción correctamente
+      ✔ devuelve 400 cuando el ID del usuario es inválido
+      ✔ devuelve 400 cuando el ID de la mascota es inválido
+      ✔ devuelve 404 cuando el usuario no existe
+      ✔ devuelve 404 cuando la mascota no existe
+      ✔ devuelve 409 cuando la mascota ya fue adoptada
+      ✔ devuelve 500 ante un error inesperado
+
+  Aplicación Express
+    ✔ responde correctamente al health check
+    ✔ devuelve 404 para una ruta inexistente
+    ✔ exige un servicio de adopciones para iniciar
+
+  Composition root
+    ✔ ensambla una instancia real de AdoptionService con repositorios en memoria
+
+  AdoptionService
+    ✔ exige todos los repositorios
+    ✔ obtiene todas las adopciones
+    ✔ obtiene una adopción por ID
+    ✔ lanza NotFoundError si la adopción no existe
+    ✔ lanza NotFoundError si el usuario no existe
+    ✔ lanza NotFoundError si la mascota no existe
+    ✔ lanza ConflictError si la mascota ya fue adoptada
+    ✔ crea la adopción y actualiza usuario y mascota
+    ✔ no duplica una mascota que ya figura en el usuario
+    ✔ inicializa pets cuando el usuario no tiene esa propiedad
+
+  Infraestructura
+    ✔ createAdoptionRouter exige un adoptionController
+    ✔ createAdoptionController exige un adoptionService
+    ✔ errorHandler delega en next(error) cuando headersSent ya es true
+
+  Repositorios en memoria
+    MemoryAdoptionRepository
+      ✔ construye con datos iniciales y getAll devuelve clones
+      ✔ getById devuelve null cuando la adopcion no existe
+      ✔ create genera un id hex, createdAt y protege el almacenado con clones
+    MemoryUserRepository
+      ✔ obtiene un usuario existente y devuelve clones
+      ✔ devuelve null para un usuario inexistente
+      ✔ actualiza un usuario existente y protege el almacenado con clones
+      ✔ devuelve null al intentar actualizar un usuario inexistente
+    MemoryPetRepository
+      ✔ obtiene una mascota existente y devuelve clones
+      ✔ devuelve null para una mascota inexistente
+      ✔ actualiza una mascota existente y protege el almacenado con clones
+      ✔ devuelve null al intentar actualizar una mascota inexistente
+
+
+  42 passing (898ms)
+
+--------------------------------|---------|----------|---------|---------|-------------------
+File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------|---------|----------|---------|---------|-------------------
+All files                       |     100 |      100 |     100 |     100 |                   
+ src                            |     100 |      100 |     100 |     100 |                   
+  app.js                        |     100 |      100 |     100 |     100 |                   
+  composition-root.js           |     100 |      100 |     100 |     100 |                   
+ src/controllers                |     100 |      100 |     100 |     100 |                   
+  adoption.controller.js        |     100 |      100 |     100 |     100 |                   
+ src/data                       |     100 |      100 |     100 |     100 |                   
+  seed.js                       |     100 |      100 |     100 |     100 |                   
+ src/errors                     |     100 |      100 |     100 |     100 |                   
+  app-errors.js                 |     100 |      100 |     100 |     100 |                   
+ src/middlewares                |     100 |      100 |     100 |     100 |                   
+  async-handler.js              |     100 |      100 |     100 |     100 |                   
+  error-handler.js              |     100 |      100 |     100 |     100 |                   
+  not-found.js                  |     100 |      100 |     100 |     100 |                   
+ src/repositories               |     100 |      100 |     100 |     100 |                   
+  memory-adoption.repository.js |     100 |      100 |     100 |     100 |                   
+  memory-pet.repository.js      |     100 |      100 |     100 |     100 |                   
+  memory-user.repository.js     |     100 |      100 |     100 |     100 |                   
+ src/routes                     |     100 |      100 |     100 |     100 |                   
+  adoption.router.js            |     100 |      100 |     100 |     100 |                   
+ src/services                   |     100 |      100 |     100 |     100 |                   
+  adoption.service.js           |     100 |      100 |     100 |     100 |                   
+ src/utils                      |     100 |      100 |     100 |     100 |                   
+  is-valid-id.js                |     100 |      100 |     100 |     100 |                   
+--------------------------------|---------|----------|---------|---------|-------------------

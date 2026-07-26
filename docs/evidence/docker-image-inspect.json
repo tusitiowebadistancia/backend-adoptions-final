@@ -1,0 +1,72 @@
+﻿[
+    {
+        "Id": "sha256:176501c7ab6f074510d85853fa221646101852f3d87ca7fcb8a6397f4c69be06",
+        "RepoTags": [
+            "backend-adoptions-final:1.0.0",
+            "backend-adoptions-final:latest"
+        ],
+        "RepoDigests": [
+            "backend-adoptions-final@sha256:176501c7ab6f074510d85853fa221646101852f3d87ca7fcb8a6397f4c69be06"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-26T18:47:20.858329667Z",
+        "Config": {
+            "User": "node",
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=24.18.0",
+                "YARN_VERSION=1.22.22",
+                "NODE_ENV=production",
+                "PORT=8080"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "node",
+                "src/server.js"
+            ],
+            "WorkingDir": "/app",
+            "ArgsEscaped": true,
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "node",
+                    "-e",
+                    "fetch('http://127.0.0.1:' + (process.env.PORT || 8080) + '/health').then((response) => { if (!response.ok) process.exit(1); }).catch(() => process.exit(1))"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 5000000000,
+                "Retries": 5
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 58316776,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:34884abbe92863fce933ed7c39c0e045631af0ed86d5cc0dfbdf9fdca426ce3c",
+                "sha256:0ba8902ff50f7fee1d64f2ed6d666e61a9fde25a6d288e667ac6690dd864f97b",
+                "sha256:b0d4b0de83068d512460168e1ee13fe81f3ba6abd4c011aa6415c8013c110e83",
+                "sha256:01028eae69241625b1dc642c51feaf4b361a9d9f0521b2714d5caea3e0a626d2",
+                "sha256:1dec16da147bb65a43d3be08ba8db04d3ffdb8089ab7b9f04ff41c075efd9ea5",
+                "sha256:d40a0f1a5ca5a38880d610af5942b9aff5f51450188011f5fa17ee49cb13def4",
+                "sha256:f0b24db5a02e1c8211e6c222733d6987d3602cb8d03c8755c4d47419fd12640e",
+                "sha256:5c75fc6478936f5b0cb5db477a1e3a45ab61d9df2f0fab5f48c307f92c8449c9"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-07-26T18:47:24.239114534Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:176501c7ab6f074510d85853fa221646101852f3d87ca7fcb8a6397f4c69be06",
+            "size": 856
+        }
+    }
+]

@@ -1,0 +1,1 @@
+﻿{"Status":"running","Running":true,"Paused":false,"Restarting":false,"OOMKilled":false,"Dead":false,"Pid":992,"ExitCode":0,"Error":"","StartedAt":"2026-07-26T18:48:48.078207856Z","FinishedAt":"0001-01-01T00:00:00Z","Health":{"Status":"healthy","FailingStreak":0,"Log":[{"Start":"2026-07-26T18:48:53.668169457Z","End":"2026-07-26T18:48:54.366366545Z","ExitCode":0,"Output":""}]}}
