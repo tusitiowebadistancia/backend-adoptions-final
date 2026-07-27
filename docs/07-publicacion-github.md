@@ -101,7 +101,7 @@ Estado observado al cierre de la Fase 4B:
 - `docs/evidence/github-final-status.txt`
 - `docs/evidence/github-log.txt`
 
-## 16. DockerHub pendiente al cierre de la Fase 4B
+## 16. Estado de Docker Hub al cierre de la Fase 4B
 
 - DockerHub seguía pendiente en ese momento
 - no se había ejecutado `docker push`

@@ -30,7 +30,7 @@ Revisión completa realizada sobre:
 - cobertura
 - Docker
 - seguridad
-- pendientes de DockerHub y GitHub
+- estado de publicacion externa
 - evidencias
 - autor
 
@@ -53,7 +53,7 @@ Validaciones reales:
 - reescritura completa de `README.md` para dejar una sola versión coherente de cada sección principal
 - eliminación de estados pendientes ya resueltos
 - eliminación de referencias al placeholder viejo de usuario
-- normalización de placeholders a `<USUARIO_GITHUB>`, `<USUARIO_DOCKERHUB>` y `<PUERTO_HOST_LIBRE>`
+- normalizacion de referencias publicas y del placeholder tecnico de puerto
 - actualización del estado Docker y seguridad al resultado final remediado
 - actualización de `GUIA-PASO-A-PASO.md`
 - actualización de `docs/entrega-final-template.md`

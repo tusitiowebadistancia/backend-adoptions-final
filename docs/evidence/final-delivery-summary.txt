@@ -1,0 +1,52 @@
+Final delivery summary generated from real execution
+
+Generation date:
+- 2026-07-27 10:27:32 -03:00
+
+GitHub URL:
+- https://github.com/tusitiowebadistancia/backend-adoptions-final
+
+Docker Hub URL:
+- https://hub.docker.com/r/figi1998/backend-adoptions-final
+
+Commit final at generation time:
+- a49460e1b090810d55e01738d7389575e7e1eaea
+
+Docker digest:
+- sha256:774feb300e9562eca3a44c0c1e972238339f5af22acbd2e466f0744ad845ffe1
+
+Tests:
+- 42 passing
+
+Coverage:
+- 100% statements
+- 100% branches
+- 100% functions
+- 100% lines
+
+npm audit:
+- npm audit --omit=dev -> found 0 vulnerabilities
+
+Scout:
+- local remediated image -> 0C 0H 0M 0L
+- remote Docker Hub linux/amd64 -> 0C 0H 0M 0L
+
+Runtime user:
+- uid=1000(node) gid=1000(node)
+
+Health:
+- healthy
+
+Endpoints:
+- 200 health
+- 200 list
+- 201 create
+- 200 get by id
+- 400 validation
+- 404 not found
+- 409 conflict
+
+Final files prepared:
+- docs/09-entrega-final.md
+- docs/10-checklist-capturas.md
+- docs/evidence/final-delivery-summary.txt

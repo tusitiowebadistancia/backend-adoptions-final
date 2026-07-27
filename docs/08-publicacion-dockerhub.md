@@ -2,7 +2,12 @@
 
 ## 1. Fecha y hora
 
-- Fecha y hora de cierre: `2026-07-26 17:27:37 -03:00`
+- Fecha originalmente consignada: `2026-07-26 17:27:37 -03:00`
+- Estado: dato arrastrado de la fase anterior
+- Evidencia temporal de ejecucion: `2026-07-26T23:44:06.603Z`
+- Hora minima aproximada de ejecucion en Argentina: `2026-07-26 20:44:06 -03:00`
+- Fecha y hora de correccion documental: `2026-07-27 10:27:32 -03:00`
+- Aclaracion: la hora exacta original de cierre no fue capturada, pero la publicacion y validacion siguen demostradas por las evidencias tecnicas y temporales disponibles
 
 ## 2. Usuario Docker Hub
 
